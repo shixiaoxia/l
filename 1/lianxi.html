@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>禁止输入</h2>
+<input type="text" id="strs" value="           要过滤的空格">
+<input type="button" id="strsBtn" value="过滤">
+<br/><input type="button" id="isContent" value="验证">
+
+<script>
+  /* window.onload = function() {
+        var strsBtn = document.getElementById("strsBtn");
+        var strs = document.getElementById("strs");
+
+        strsBtn.onclick = function () {
+            strs.value = strs.value.replace(/^(\s|\u00A0)+|(\s|u00A0)+$/g,"");
+        }
+    }
+    window.onload = function(){
+        var strs = document.getElementById("strs");
+        var isContent = document.getElementById("isContent");
+        isContent.onclick = function(){
+            if(!strs.value.replace(/^(\s|\u00A0)+|(\s|u00A0)+/g,"")){
+                alert("输入为空")
+            }else{
+                alert("输入不为空")
+            }
+        }
+
+
+   }
+
+   //禁止输入
+    window.onload = function(){
+        var strs = document.getElementById("strs");
+        strs.onfocus = function(){
+            strs.blur()
+        }
+        strs.onkeyup = strs.onblur = noTexe;
+    }*/
+
+
+
+  //禁止复制粘贴
+    var strs = document.getElementById("strs");
+    strs.oncopy = function(){
+        return false;
+    }
+    strs.onpaste = function(){
+        return false;
+    }
+</script>
+</body>
+</html>
