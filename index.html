@@ -2,50 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-
-
+    <title>作品集</title>
+    <link href="style/style.css" rel="stylesheet" >
 </head>
 <body>
-<div class="qh">
-    <div class="ym" id="ym">
-        <ul>
-            <li id="ym1">页面1</li>
-            <li id="ym2">页面2</li>
-            <li id="ym3">页面3</li>
-        </ul>
-    </div>
-    <div class="ym1" id="openym1">
-        <ul>
-            <li><a href="1/lianxi.html">页面1</a></li>
-            <li>页面1</li>
-            <li>页面1</li>
-        </ul>
-    </div>
-    <div class="ym2" id="openym2">
-        <ul>
-            <li>页面2</li>
-            <li>页面2</li>
-            <li>页面2</li>
-        </ul>
-    </div>
-    <div class="ym3" id="openym3">
-        <ul>
-            <li>页面3</li>
-            <li>页面3</li>
-            <li>页面3</li>
-        </ul>
-    </div>
-    <a href="1/lianxi.html">链接</a>
+<div class="show">
+    <ol id="list">
+        <li>
+            <h1>
+                <a href="#" title="第一章">第一章 表单效果</a>
+            </h1>
+            <dl>
+                <dd><a href="1/1/index.html" target="_blank">去除字符串左右的空格</a></dd>
+                <dd><a href="1/2/index.html" target="_blank">验证用户是否输入</a></dd>
+                <dd><a href="1/3/index.html" target="_blank">禁止输入</a></dd>
+                <dd><a href="1/4/index.html" target="_blank">关闭用户中文输入法</a></dd>
+                <dd><a href="1/5/index.html" target="_blank">禁止用户复制和粘贴</a></dd>
+                <dd><a href="1/6/index.html" target="_blank">限制只能输入数字</a></dd>
+                <dd><a href="1/7/index.html" target="_blank">限制字符串长度</a></dd>
+                <dd><a href="1/8/index.html" target="_blank">提示可输入剩余字数</a></dd>
+                <dd><a href="1/9/index.html" target="_blank">段落文本文字自动滚动</a></dd>
+                <dd><a href="1/10/index.html" target="_blank">全选反选少选复选框</a></dd>
+            </dl>
+        </li>
+        <li>
+            <h1>
+            <a href="#" title="第二章">第二章 静态网页开发</a>
+            </h1>
+            <dl>
+                <dd><a>电商网站</a></dd>
 
+            </dl>
+        </li>
 
+    </ol>
 </div>
-<div><button id="dl">登陆</button></div>
-
-
-
-<script src="javascripts/jquery-1.12.3.min.js"></script>
-<script  src="javascripts/ymqiehuan.js"></script>
+<script src="scripts/show.js"></script>
 </body>
 </html>

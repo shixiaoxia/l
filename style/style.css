@@ -1,0 +1,80 @@
+li h1 a{
+    text-indent: 15px;
+    text-decoration: none;
+    font: bold 27px "微软雅黑" ;
+    color: #3F3E3E;
+    padding: 10px 8px;
+    display: block;
+    line-height: 55px;
+    border: solid 0 #f0f0f0;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+
+
+}
+ol li {
+
+    border-bottom: solid 1px #F5F4F4;
+    line-height: 55px;
+    font: bold 20px "微软雅黑";
+
+
+
+
+
+}
+.show {
+    height: auto;
+    width: 500px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: #F5F4F4;
+    margin:  0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    -moz-border-radius: 25px;/*旧版本firefox*/
+    box-shadow: 0 1px 2px #888;
+
+}
+dl {
+    display: none;
+}
+ol {
+    padding: 0 60px;
+}
+
+
+h1 a:hover{
+
+    border-radius:5px;color: #fff;
+    text-decoration:none;
+    background-color: #3F3E3E;
+}
+
+h1 {
+    margin: 0;
+}
+
+dd a {
+    text-decoration: none;
+    display: block;
+    text-indent: 15px;
+    font: bold 25px "微软雅黑";
+    color: #3F3E3E;
+    line-height: 55px;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+}
+dd a:hover {
+    border-radius:5px;
+    color: #fff;
+    text-decoration:none;
+    background-color: #3F3E3E;
+
+}
+
+

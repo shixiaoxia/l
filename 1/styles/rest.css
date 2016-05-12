@@ -1,0 +1,17 @@
+.demo1 {
+    margin: 50px auto;
+    width: 420px;
+
+}
+
+.popover {
+    position: absolute;
+
+    display: block;
+    float: left;
+    top: -5px;
+    left: 370px;
+    width: 190px;
+    color: #ff0000;
+
+}

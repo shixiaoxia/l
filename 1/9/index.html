@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>段落文本文字自动滚动</title>
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="../styles/bootstrap-theme.min.css" media="all">
+    <link rel="stylesheet" href="../styles/rest.css" media="all">
+</head>
+<body>
+<div class="demo1">
+    <h3>人来人往</h3>
+    <div id="roll" data-rwidth="100" data-rheight="100" class="roll">
+        <ul id="ul" class="list" style="list-style: none">
+            <li>朋友已走</li>
+            <li>刚升职的你举杯到凌晨还未够</li>
+            <li>用尽心机拉我手</li>
+            <li>缠在我颈背后</li>
+            <li>说你男友有事忙是借口</li>
+            <li>说到终于饮醉酒</li>
+            <li>情侣会走</li>
+            <li>刚失恋的你哭干眼泪前来自首</li>
+            <li>寂寞因此牵我手</li>
+            <li>除下了他手信后</li>
+            <li>我已得到你没有</li>
+            <li>但你我至少往后/li>
+            <li>成为了蜜友</li>
+            <li>闭起双眼你最挂念谁</li>
+            <li>眼睛张开身边竟是谁</li>
+            <li>感激车站里/li>
+            <li>尚有月台能让我们满足到落泪</li>
+        </ul>
+    </div>
+</div>
+<script>
+    (function(){
+        var ul = document.getElementById('ul');
+        var li = ul.getElementsByTagName('li');
+        var len = li.length;
+
+        function auto(){
+            act(ul, 'marginTop', -20, function(){
+                ul.appendChild(ul.children[0]);
+                ul.style.marginTop = 0;
+                setTimeout(function(){
+                    auto();
+                }, 800);
+            });
+        }
+        auto();
+
+        function css(obj, attr){
+            if(obj.currentStyle){
+                return obj.currentStyle[attr];
+            } else {
+                return getComputedStyle(obj, null)[attr];
+            }
+        }
+        function act(obj, attr, target, fn){
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function(){
+                var cur = parseInt(css(obj, attr));
+                var speed = (target - cur) / 8;
+                var stop = true;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if(target != cur){
+                    stop = false;
+                }
+                obj.style[attr] = speed + cur + 'px';
+                if(stop){
+                    clearInterval(obj.timer);
+                    obj.timer = null;
+                    fn && fn.call(obj);
+                }
+            }, 20);
+        }
+    }());
+</script>
+</body>
+</html>
